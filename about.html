@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | All Tech Connect</title>
+<meta name="description" content="Spencer Gamache is a Houston-based tech consultant and former Apple One to One trainer. Personal tech support for homes and small businesses.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blue: #017ce7;
+  --teal: #1aadbc;
+  --green: #88d04b;
+  --navy: #25416e;
+  --navy-deep: #162b46;
+  --ink: #131924;
+  --paper: #fefefe;
+  --gray-50: #fafafa;
+  --gray-100: #f4f4f3;
+  --gray-200: #e8e8e6;
+  --gray-300: #d3d1c7;
+  --gray-500: #888780;
+  --gray-700: #545454;
+  --gradient: linear-gradient(135deg, var(--blue) 0%, var(--teal) 50%, var(--green) 100%);
+  --shadow-lg: 0 12px 40px rgba(19,25,36,0.08);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  font-size: 17px;
+}
+h1, h2, h3, h4 {
+  font-family: 'Outfit', system-ui, sans-serif;
+  color: var(--ink);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+}
+
+/* === NAV === */
+.nav {
+  position: sticky; top: 0;
+  background: rgba(254,254,254,0.85);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid var(--gray-200);
+  z-index: 100;
+}
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 24px; max-width: 1120px; margin: 0 auto;
+}
+.logo { display: flex; align-items: center; text-decoration: none; }
+.logo img { height: 36px; width: auto; }
+.nav-links { display: flex; align-items: center; gap: 32px; }
+.nav-links a { color: var(--gray-700); text-decoration: none; font-size: 15px; font-weight: 500; transition: color 0.2s; }
+.nav-links a:hover { color: var(--navy); }
+.nav-links a.active { color: var(--navy); }
+.btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 11px 22px; border-radius: 100px;
+  font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500;
+  text-decoration: none; border: none; cursor: pointer; transition: all 0.2s ease;
+}
+.btn-primary { background: var(--blue); color: white; }
+.btn-primary:hover { background: #0067c3; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(1,124,231,0.25); }
+.btn-secondary { background: transparent; color: var(--navy); border: 1px solid var(--gray-300); }
+.btn-secondary:hover { border-color: var(--navy); background: var(--gray-50); }
+.btn-large { padding: 14px 28px; font-size: 16px; }
+
+/* === ABOUT HERO === */
+.about-hero {
+  padding: 80px 24px 0;
+  text-align: center;
+}
+.headshot-wrap {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 32px;
+  border: 4px solid var(--gray-200);
+  box-shadow: var(--shadow-lg);
+}
+.headshot-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.about-hero h1 { font-size: clamp(32px, 5vw, 48px); font-weight: 600; margin-bottom: 16px; max-width: 720px; margin-left: auto; margin-right: auto; }
+.about-hero .lead { font-size: 19px; color: var(--gray-700); max-width: 640px; margin: 0 auto 36px; line-height: 1.6; }
+.about-hero .cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 60px; }
+
+/* === BIO SECTION === */
+.bio {
+  padding: 60px 24px 80px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+.bio p { font-size: 18px; color: var(--gray-700); line-height: 1.75; margin-bottom: 20px; }
+.bio p:last-child { margin-bottom: 0; }
+.bio strong { color: var(--ink); font-weight: 600; }
+
+/* === VALUES === */
+.values {
+  padding: 80px 24px;
+  background: var(--gray-50);
+  border-top: 1px solid var(--gray-200);
+  border-bottom: 1px solid var(--gray-200);
+}
+.section-header { text-align: center; max-width: 680px; margin: 0 auto 56px; }
+.section-eyebrow { font-size: 13px; font-weight: 600; color: var(--blue); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; }
+.section-title { font-size: clamp(28px, 4vw, 38px); font-weight: 600; margin-bottom: 16px; }
+.section-sub { font-size: 17px; color: var(--gray-700); line-height: 1.55; }
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.value-card {
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: 16px;
+  padding: 28px;
+}
+.value-icon {
+  font-size: 28px;
+  margin-bottom: 14px;
+}
+.value-card h3 { font-size: 18px; font-weight: 600; color: var(--navy); margin-bottom: 10px; }
+.value-card p { font-size: 15px; color: var(--gray-700); line-height: 1.6; }
+
+/* === CREDENTIALS === */
+.credentials {
+  padding: 80px 24px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+.credentials h2 { font-size: clamp(26px, 4vw, 34px); font-weight: 600; margin-bottom: 32px; }
+.cred-list { list-style: none; padding: 0; }
+.cred-list li {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--gray-200);
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  font-size: 16px;
+  color: var(--gray-700);
+  line-height: 1.5;
+}
+.cred-list li:first-child { border-top: 1px solid var(--gray-200); }
+.cred-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--blue);
+  flex-shrink: 0;
+  margin-top: 7px;
+}
+
+/* === FINAL CTA === */
+.final-cta { padding: 100px 24px; text-align: center; background: var(--ink); }
+.final-cta-inner { max-width: 640px; margin: 0 auto; }
+.final-cta h2 { font-size: clamp(30px, 5vw, 44px); font-weight: 600; margin-bottom: 18px; color: white; }
+.final-cta p { font-size: 18px; color: rgba(255,255,255,0.7); margin-bottom: 32px; }
+
+/* === FOOTER === */
+footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 60px 24px 40px; font-size: 14px; }
+.footer-inner {
+  max-width: 1120px; margin: 0 auto;
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px; padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.footer-logo img { height: 32px; width: auto; filter: brightness(0) invert(1); opacity: 0.9; }
+.footer-brand p { margin-top: 14px; font-size: 14px; color: rgba(255,255,255,0.5); max-width: 280px; line-height: 1.6; }
+.footer-col h4 { color: white; font-size: 14px; font-family: 'DM Sans', sans-serif; font-weight: 600; margin-bottom: 16px; }
+.footer-col a { display: block; color: rgba(255,255,255,0.6); text-decoration: none; padding: 4px 0; font-size: 14px; }
+.footer-col a:hover { color: white; }
+.footer-bottom {
+  max-width: 1120px; margin: 0 auto; padding-top: 24px;
+  display: flex; justify-content: space-between;
+  font-size: 13px; color: rgba(255,255,255,0.4); flex-wrap: wrap; gap: 12px;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 860px) {
+  .nav-links a:not(.btn) { display: none; }
+  .values-grid { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+  .about-hero, .bio, .credentials { padding-left: 24px; padding-right: 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="All Tech Connect">
+    </a>
+    <div class="nav-links">
+      <a href="services-pricing.html">Services &amp; Pricing</a>
+      <a href="about.html" class="active">About</a>
+      <a href="https://book.all-tech-connect.com" target="_blank" class="btn btn-primary">Book free call</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ABOUT HERO -->
+<section class="about-hero">
+  <div class="headshot-wrap">
+    <img src="headshot.png" alt="Spencer Gamache, founder of All Tech Connect">
+  </div>
+  <h1>The tech-savvy friend you've always needed.</h1>
+  <p class="lead">I'm Spencer Gamache, founder of All Tech Connect. I help individuals, seniors, and small businesses across Houston actually get the most out of their technology.</p>
+  <div class="cta-row">
+    <a href="https://book.all-tech-connect.com" target="_blank" class="btn btn-primary btn-large">Book a free call</a>
+    <a href="services-pricing.html" class="btn btn-secondary btn-large">See services &amp; pricing</a>
+  </div>
+</section>
+
+<!-- BIO -->
+<section class="bio">
+  <p>I spent five-plus years at Apple as a One to One trainer, where I learned something more valuable than any technical skill: how to translate complex technology into plain English for real people with real problems.</p>
+  <p>Now I do that work independently. All Tech Connect isn't a call center, a franchise, or a marketplace. <strong>It's me, working directly with you.</strong> I come to your home, I meet you where you are, and I don't move on until you feel confident.</p>
+  <p>I serve a wide range of clients, from seniors learning to use a new iPhone for the first time to executives who need their entire tech setup streamlined and documented. I've helped small business owners build AI-powered workflows, families set up smart homes, and professionals finally get their files, photos, and accounts organized the way they should have been all along.</p>
+  <p>Most of my business comes from referrals. That's not an accident. It's the whole model. I'd rather do excellent work for a small number of people who trust me than market my way to the top of a search page.</p>
+  <p>If you need someone to give it to you straight, show up prepared, and not waste your time, that's what I do.</p>
+  <p style="font-family: 'Outfit', sans-serif; font-weight: 600; color: var(--navy); font-size: 17px; margin-top: 32px;">— Spencer Gamache, founder</p>
+</section>
+
+<!-- VALUES -->
+<section class="values">
+  <div class="section-header">
+    <div class="section-eyebrow">How I work</div>
+    <h2 class="section-title">What you can expect.</h2>
+    <p class="section-sub">A few things I take seriously every time I work with someone.</p>
+  </div>
+  <div class="values-grid">
+    <div class="value-card">
+      <div class="value-icon">🎯</div>
+      <h3>I come prepared.</h3>
+      <p>I use a discovery call to understand your setup before I arrive. You won't have to explain everything twice, and I won't show up and figure it out as I go.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">💬</div>
+      <h3>I speak plain English.</h3>
+      <p>No jargon. No condescension. I meet you at your level, whether you're a first-time smartphone user or a seasoned professional with a complex setup.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">🤝</div>
+      <h3>I teach, not just fix.</h3>
+      <p>My goal isn't to be indispensable. I want you to feel confident and capable when we're done. I'll always explain what I'm doing and why.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">🔍</div>
+      <h3>I'm honest about scope.</h3>
+      <p>If something is outside my wheelhouse, I'll say so and point you in the right direction. I don't overpromise or take on work I can't do well.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">⚡</div>
+      <h3>I don't waste your time.</h3>
+      <p>I show up on time, work efficiently, and give you clear next steps before we wrap up. No open-ended sessions that drag on without a resolution.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">🏡</div>
+      <h3>I'm local and accountable.</h3>
+      <p>This is my business and my reputation. Every client is a referral source for the next one. That keeps me accountable in a way a large company never has to be.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section class="credentials">
+  <h2>Background &amp; experience.</h2>
+  <ul class="cred-list">
+    <li>
+      <div class="cred-bullet"></div>
+      <span><strong>Former Apple One to One Trainer</strong> — five-plus years working directly with Apple customers on devices, software, and digital workflows</span>
+    </li>
+    <li>
+      <div class="cred-bullet"></div>
+      <span><strong>Founder, All Tech Connect</strong> (est. 2026) — personal tech support and smart home services for individuals and small businesses in Houston</span>
+    </li>
+    <li>
+      <div class="cred-bullet"></div>
+      <span><strong>Clients across Houston</strong> — individuals, seniors, home office professionals, and small business owners</span>
+    </li>
+    <li>
+      <div class="cred-bullet"></div>
+      <span><strong>Remote and in-home support</strong> — I serve clients both on-site across the Houston area and remotely anywhere in the US</span>
+    </li>
+    <li>
+      <div class="cred-bullet"></div>
+      <span><strong>Apple ecosystem specialist</strong> — iPhone, iPad, Mac, AirPods, Apple Watch, iCloud, and the full suite of Apple software and services</span>
+    </li>
+    <li>
+      <div class="cred-bullet"></div>
+      <span><strong>Smart home installation</strong> — smart doorbells, locks, thermostats, and related devices across major platforms</span>
+    </li>
+    <li>
+      <div class="cred-bullet"></div>
+      <span><strong>AI tools and workflows</strong> — helping small businesses and professionals get practical value out of AI tools without the hype</span>
+    </li>
+  </ul>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="final-cta-inner">
+    <h2>Ready to work together?</h2>
+    <p>The first call is free, friendly, and only takes 20 minutes. No pitch, no pressure.</p>
+    <a href="https://book.all-tech-connect.com" target="_blank" class="btn btn-primary btn-large">Book your free consultation</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="logo.png" alt="All Tech Connect">
+      </div>
+      <p>Your personal tech concierge. Houston, TX. Tuesday through Saturday, 10am to 7pm Central.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="services-pricing.html#individuals">For individuals</a>
+      <a href="services-pricing.html#business">For business</a>
+      <a href="services-pricing.html#installs">Smart home</a>
+      <a href="services-pricing.html#strategy">AI consulting</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="about.html">About</a>
+      <a href="services-pricing.html">Pricing</a>
+    </div>
+    <div class="footer-col">
+      <h4>Get in touch</h4>
+      <a href="tel:8329002045">(832) 900-2045</a>
+      <a href="mailto:spencer@all-tech-connect.com">spencer@all-tech-connect.com</a>
+      <a href="https://book.all-tech-connect.com" target="_blank">Book a call</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 All Tech Connect, LLC. Houston, TX.</div>
+    <div>Setup. Support. Strategy.</div>
+  </div>
+</footer>
+
+</body>
+</html>

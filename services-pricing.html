@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services &amp; Pricing | All Tech Connect</title>
+<meta name="description" content="Simple tech help for homes, professionals, and small businesses. Remote and in-home support, smart home installs, prepaid packs, monthly plans, and business tech support in Houston.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blue: #017ce7;
+  --teal: #1aadbc;
+  --green: #88d04b;
+  --navy: #25416e;
+  --navy-deep: #162b46;
+  --ink: #131924;
+  --paper: #fefefe;
+  --gray-50: #fafafa;
+  --gray-100: #f4f4f3;
+  --gray-200: #e8e8e6;
+  --gray-300: #d3d1c7;
+  --gray-500: #888780;
+  --gray-700: #545454;
+  --gradient: linear-gradient(135deg, var(--blue) 0%, var(--teal) 50%, var(--green) 100%);
+  --shadow-sm: 0 1px 2px rgba(19,25,36,0.04);
+  --shadow-md: 0 4px 20px rgba(19,25,36,0.06);
+  --shadow-lg: 0 12px 40px rgba(19,25,36,0.08);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  font-size: 17px;
+}
+h1, h2, h3, h4 {
+  font-family: 'Outfit', system-ui, sans-serif;
+  color: var(--ink);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+}
+.container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+/* === NAV === */
+.nav {
+  position: sticky; top: 0;
+  background: rgba(254,254,254,0.85);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid var(--gray-200);
+  z-index: 100;
+}
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 24px; max-width: 1120px; margin: 0 auto;
+}
+.logo { display: flex; align-items: center; text-decoration: none; }
+.logo img { height: 36px; width: auto; }
+.nav-links { display: flex; align-items: center; gap: 32px; }
+.nav-links a { color: var(--gray-700); text-decoration: none; font-size: 15px; font-weight: 500; transition: color 0.2s; }
+.nav-links a:hover { color: var(--navy); }
+.nav-links a.active { color: var(--navy); }
+.btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 11px 22px; border-radius: 100px;
+  font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500;
+  text-decoration: none; border: none; cursor: pointer; transition: all 0.2s ease;
+}
+.btn-primary { background: var(--blue); color: white; }
+.btn-primary:hover { background: #0067c3; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(1,124,231,0.25); }
+.btn-secondary { background: transparent; color: var(--navy); border: 1px solid var(--gray-300); }
+.btn-secondary:hover { border-color: var(--navy); background: var(--gray-50); }
+.btn-large { padding: 14px 28px; font-size: 16px; }
+.btn-outline-blue { background: transparent; color: var(--blue); border: 1.5px solid var(--blue); }
+.btn-outline-blue:hover { background: rgba(1,124,231,0.06); }
+
+/* === PAGE HERO === */
+.page-hero {
+  padding: 80px 24px 60px;
+  text-align: center;
+  background: var(--gray-50);
+  border-bottom: 1px solid var(--gray-200);
+}
+.page-hero .section-eyebrow {
+  font-size: 13px; font-weight: 600; color: var(--blue);
+  text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px;
+}
+.page-hero h1 { font-size: clamp(36px, 5vw, 52px); font-weight: 600; margin-bottom: 18px; }
+.page-hero p { font-size: 19px; color: var(--gray-700); max-width: 640px; margin: 0 auto 32px; line-height: 1.5; }
+.page-hero .hero-cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+/* === SECTION LAYOUTS === */
+.section-header { text-align: center; max-width: 680px; margin: 0 auto 56px; }
+.section-eyebrow { font-size: 13px; font-weight: 600; color: var(--blue); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; }
+.section-title { font-size: clamp(28px, 4vw, 38px); font-weight: 600; margin-bottom: 16px; }
+.section-sub { font-size: 17px; color: var(--gray-700); line-height: 1.55; }
+
+/* === PILLARS STRIP === */
+.pillars-strip {
+  padding: 80px 24px;
+  background: var(--paper);
+  border-bottom: 1px solid var(--gray-200);
+}
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.pillar-card {
+  border-left: 3px solid var(--gray-200);
+  padding-left: 24px;
+}
+.pillar-card.blue { border-color: var(--blue); }
+.pillar-card.teal { border-color: var(--teal); }
+.pillar-card.green { border-color: var(--green); }
+.pillar-card h3 { font-size: 22px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+.pillar-card .sub { font-size: 13px; font-weight: 600; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; }
+.pillar-card p { font-size: 15px; color: var(--gray-700); line-height: 1.6; margin-bottom: 14px; }
+.pillar-card ul { list-style: none; padding: 0; }
+.pillar-card ul li { font-size: 14px; color: var(--gray-700); padding: 4px 0; padding-left: 16px; position: relative; }
+.pillar-card ul li::before { content: '→'; position: absolute; left: 0; color: var(--gray-300); font-size: 12px; }
+
+/* === PACKS VS PLANS === */
+.packs-plans-explainer {
+  padding: 80px 24px;
+  background: var(--gray-50);
+  border-bottom: 1px solid var(--gray-200);
+}
+.compare-table {
+  max-width: 840px;
+  margin: 0 auto;
+  border: 1px solid var(--gray-200);
+  border-radius: 16px;
+  overflow: hidden;
+  background: white;
+}
+.compare-table table { width: 100%; border-collapse: collapse; }
+.compare-table thead th {
+  padding: 16px 24px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: left;
+  color: white;
+}
+.compare-table thead th:first-child { background: var(--blue); }
+.compare-table thead th:last-child { background: var(--teal); }
+.compare-table tbody td { padding: 13px 24px; font-size: 15px; color: var(--gray-700); border-top: 1px solid var(--gray-100); }
+.compare-table tbody td:first-child { color: var(--ink); font-weight: 500; border-right: 1px solid var(--gray-100); }
+.compare-table tbody tr:last-child td { border-bottom: none; }
+
+/* === PRICING CARDS === */
+.pricing-section {
+  padding: 80px 24px;
+}
+.pricing-section.alt { background: var(--gray-50); border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200); }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.card-grid.two-col { grid-template-columns: repeat(2, 1fr); max-width: 720px; }
+.card-grid.four-col { grid-template-columns: repeat(4, 1fr); max-width: 1080px; }
+
+.pricing-card {
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: 20px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.pricing-card.featured {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(1,124,231,0.08);
+}
+.featured-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--blue);
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 100px;
+  white-space: nowrap;
+  font-family: 'DM Sans', sans-serif;
+}
+.card-label { font-size: 13px; font-weight: 600; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
+.card-title { font-size: 22px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+.card-price { font-family: 'Outfit', sans-serif; font-size: 36px; font-weight: 700; color: var(--ink); line-height: 1; margin-bottom: 4px; }
+.card-price span { font-size: 16px; font-weight: 400; color: var(--gray-500); }
+.card-duration { font-size: 13px; color: var(--gray-500); margin-bottom: 20px; }
+.card-best-for { font-size: 14px; color: var(--gray-700); margin-bottom: 20px; line-height: 1.5; font-style: italic; }
+.card-divider { height: 1px; background: var(--gray-100); margin: 16px 0; }
+.card-includes { font-size: 12px; font-weight: 600; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px; }
+.card-list { list-style: none; padding: 0; margin-bottom: 20px; flex-grow: 1; }
+.card-list li { font-size: 14px; color: var(--gray-700); padding: 5px 0; padding-left: 20px; position: relative; line-height: 1.4; }
+.card-list li::before { content: '✓'; position: absolute; left: 0; color: var(--green); font-size: 13px; font-weight: 700; }
+.card-note { font-size: 13px; color: var(--gray-500); margin-bottom: 20px; line-height: 1.5; }
+.card-cta { margin-top: auto; }
+.card-cta a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 12px;
+  border-radius: 100px;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-family: 'DM Sans', sans-serif;
+}
+.cta-primary { background: var(--blue); color: white; }
+.cta-primary:hover { background: #0067c3; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(1,124,231,0.25); }
+.cta-secondary { border: 1.5px solid var(--gray-300); color: var(--navy); }
+.cta-secondary:hover { border-color: var(--navy); background: var(--gray-50); }
+.cta-teal { background: var(--teal); color: white; }
+.cta-teal:hover { background: #148f9c; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(26,173,188,0.25); }
+.cta-green { background: #5fa028; color: white; }
+.cta-green:hover { background: #4d841f; transform: translateY(-1px); }
+.cta-navy { background: var(--navy); color: white; }
+.cta-navy:hover { background: var(--navy-deep); transform: translateY(-1px); }
+
+/* === IN-HOME UPGRADE BANNER === */
+.inhome-banner {
+  max-width: 1080px;
+  margin: 32px auto 0;
+  background: var(--navy);
+  border-radius: 16px;
+  padding: 28px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.inhome-banner h4 { font-size: 18px; font-weight: 600; color: white; margin-bottom: 4px; }
+.inhome-banner p { font-size: 14px; color: rgba(255,255,255,0.7); line-height: 1.5; }
+.inhome-badge {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+  padding: 12px 24px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.inhome-badge .price { font-family: 'Outfit', sans-serif; font-size: 28px; font-weight: 700; color: white; }
+.inhome-badge .label { font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 2px; }
+
+/* === SERVICE NOTES ACCORDION === */
+.service-notes {
+  padding: 80px 24px;
+  background: var(--gray-50);
+  border-top: 1px solid var(--gray-200);
+  border-bottom: 1px solid var(--gray-200);
+}
+.accordion { max-width: 840px; margin: 0 auto; }
+.accordion-item { border-bottom: 1px solid var(--gray-200); }
+.accordion-item:first-child { border-top: 1px solid var(--gray-200); }
+.accordion-btn {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 20px 4px;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.accordion-btn:hover { color: var(--blue); }
+.accordion-icon { font-size: 20px; color: var(--gray-500); line-height: 1; transition: transform 0.2s; flex-shrink: 0; }
+.accordion-btn.open .accordion-icon { transform: rotate(45deg); }
+.accordion-body {
+  display: none;
+  padding: 0 4px 20px;
+  font-size: 15px;
+  color: var(--gray-700);
+  line-height: 1.7;
+}
+.accordion-body.open { display: block; }
+
+/* === FAQ === */
+.faq {
+  padding: 80px 24px;
+}
+.faq-grid { max-width: 840px; margin: 0 auto; }
+.faq-item { margin-bottom: 32px; }
+.faq-item h4 { font-size: 17px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+.faq-item p { font-size: 15px; color: var(--gray-700); line-height: 1.65; }
+
+/* === FINAL CTA === */
+.final-cta { padding: 100px 24px; text-align: center; background: var(--ink); }
+.final-cta-inner { max-width: 640px; margin: 0 auto; }
+.final-cta h2 { font-size: clamp(32px, 5vw, 46px); font-weight: 600; margin-bottom: 18px; color: white; }
+.final-cta p { font-size: 18px; color: rgba(255,255,255,0.7); margin-bottom: 32px; }
+
+/* === FOOTER === */
+footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 60px 24px 40px; font-size: 14px; }
+.footer-inner {
+  max-width: 1120px; margin: 0 auto;
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px; padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.footer-logo img { height: 32px; width: auto; filter: brightness(0) invert(1); opacity: 0.9; }
+.footer-brand p { margin-top: 14px; font-size: 14px; color: rgba(255,255,255,0.5); max-width: 280px; line-height: 1.6; }
+.footer-col h4 { color: white; font-size: 14px; font-family: 'DM Sans', sans-serif; font-weight: 600; margin-bottom: 16px; }
+.footer-col a { display: block; color: rgba(255,255,255,0.6); text-decoration: none; padding: 4px 0; font-size: 14px; }
+.footer-col a:hover { color: white; }
+.footer-bottom {
+  max-width: 1120px; margin: 0 auto; padding-top: 24px;
+  display: flex; justify-content: space-between;
+  font-size: 13px; color: rgba(255,255,255,0.4); flex-wrap: wrap; gap: 12px;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 860px) {
+  .nav-links a:not(.btn) { display: none; }
+  .pillars-grid, .card-grid, .card-grid.two-col, .card-grid.four-col { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+  .pricing-section { padding: 60px 24px; }
+  .page-hero { padding: 60px 24px 40px; }
+  .inhome-banner { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="All Tech Connect">
+    </a>
+    <div class="nav-links">
+      <a href="services-pricing.html" class="active">Services &amp; Pricing</a>
+      <a href="about.html">About</a>
+      <a href="https://book.all-tech-connect.com" target="_blank" class="btn btn-primary">Book free call</a>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="section-eyebrow">Services &amp; Pricing</div>
+  <h1>Simple tech help for your home, work, and everyday life.</h1>
+  <p>Remote and in-home support available in the Houston area. Clear pricing, no surprises.</p>
+  <div class="hero-cta">
+    <a href="https://book.all-tech-connect.com" target="_blank" class="btn btn-primary btn-large">Book free consultation</a>
+    <a href="#one-time" class="btn btn-secondary btn-large">View pricing</a>
+  </div>
+</section>
+
+<!-- SETUP. SUPPORT. STRATEGY. -->
+<section class="pillars-strip" id="individuals">
+  <div class="section-header">
+    <div class="section-eyebrow">How I work</div>
+    <h2 class="section-title">Setup. Support. Strategy.</h2>
+    <p class="section-sub">Whether you need help getting started, staying on track, or building something better long-term — there's a path for you.</p>
+  </div>
+  <div class="pillars-grid">
+    <div class="pillar-card blue" id="setup">
+      <div class="sub">01 — Setup</div>
+      <h3>Get it working right.</h3>
+      <p>Best for getting started. New device, new home, new system — I make sure it's set up correctly and you actually know how to use it.</p>
+      <ul>
+        <li>New Apple device setup</li>
+        <li>Email and account setup</li>
+        <li>Printer and WiFi setup</li>
+        <li>Password manager setup</li>
+        <li>Cloud storage setup</li>
+        <li>Data transfers and migrations</li>
+        <li>Basic training</li>
+      </ul>
+    </div>
+    <div class="pillar-card teal" id="support">
+      <div class="sub">02 — Support</div>
+      <h3>Help when you're stuck.</h3>
+      <p>Best for keeping things working. Something broke, something's slow, or you just need a second set of eyes. Remote or in-home.</p>
+      <ul>
+        <li>Troubleshooting</li>
+        <li>Software updates</li>
+        <li>Backup setup and review</li>
+        <li>Device cleanup</li>
+        <li>Cloud storage cleanup</li>
+        <li>Security and scam checkups</li>
+        <li>Purchase guidance</li>
+      </ul>
+    </div>
+    <div class="pillar-card green" id="strategy">
+      <div class="sub">03 — Strategy</div>
+      <h3>Build something that scales.</h3>
+      <p>Best for improving your overall setup. Tech planning, AI tools, workflows, and vendor decisions that fit how you actually work.</p>
+      <ul>
+        <li>Tech roadmap</li>
+        <li>AI tools onboarding</li>
+        <li>Workflow improvement</li>
+        <li>Device ecosystem planning</li>
+        <li>Smart home planning</li>
+        <li>Vendor recommendations</li>
+        <li>Backup strategy and check-ins</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PACKS VS PLANS -->
+<section class="packs-plans-explainer">
+  <div class="section-header">
+    <div class="section-eyebrow">How to choose</div>
+    <h2 class="section-title">Packs are for projects. Plans are for peace of mind.</h2>
+    <p class="section-sub">Two simple ways to get help beyond a single session.</p>
+  </div>
+  <div class="compare-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Choose a Pack if...</th>
+          <th>Choose a Plan if...</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>You want prepaid sessions without a monthly commitment</td>
+          <td>You want ongoing support and priority access</td>
+        </tr>
+        <tr>
+          <td>You have a specific project to complete</td>
+          <td>You want help available throughout the year</td>
+        </tr>
+        <tr>
+          <td>You want to save compared to booking one session at a time</td>
+          <td>You want proactive check-ins and guidance</td>
+        </tr>
+        <tr>
+          <td>You're comfortable scheduling when you need help</td>
+          <td>You want a trusted tech contact ready when issues come up</td>
+        </tr>
+        <tr>
+          <td>You need flexibility but not ongoing access</td>
+          <td>You want peace of mind and relationship-based support</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ONE-TIME HELP -->
+<section class="pricing-section" id="one-time">
+  <div class="section-header">
+    <div class="section-eyebrow">One-time help</div>
+    <h2 class="section-title">Start simple.</h2>
+    <p class="section-sub">Need help with one issue or want to try before committing? Book a consultation, remote session, or in-home visit.</p>
+  </div>
+  <div class="card-grid">
+
+    <div class="pricing-card">
+      <div class="card-label">Free</div>
+      <div class="card-title">Consultation</div>
+      <div class="card-price">$0</div>
+      <div class="card-duration">20–30 min · Phone or video</div>
+      <div class="card-divider"></div>
+      <div class="card-includes">Includes</div>
+      <ul class="card-list">
+        <li>Scope review</li>
+        <li>Fit check</li>
+        <li>Service recommendation</li>
+        <li>Booking guidance</li>
+      </ul>
+      <div class="card-note">The consultation is for scoping and fit. Troubleshooting starts once a session is booked.</div>
+      <div class="card-cta"><a href="https://book.all-tech-connect.com" target="_blank" class="cta-secondary">Book free consultation</a></div>
+    </div>
+
+    <div class="pricing-card featured">
+      <div class="featured-badge">Most popular</div>
+      <div class="card-label">Remote</div>
+      <div class="card-title">Single Session</div>
+      <div class="card-price">$75</div>
+      <div class="card-duration">1 hour · Remote</div>
+      <div class="card-divider"></div>
+      <div class="card-includes">Includes</div>
+      <ul class="card-list">
+        <li>Troubleshooting</li>
+        <li>Setup and training</li>
+        <li>Account organization</li>
+        <li>Purchase guidance</li>
+        <li>General tech support</li>
+      </ul>
+      <div class="card-note">Additional time billed at $75/hr in 15-min increments.</div>
+      <div class="card-cta"><a href="https://book.all-tech-connect.com" target="_blank" class="cta-primary">Book remote session</a></div>
+    </div>
+
+    <div class="pricing-card">
+      <div class="card-label">In-Home</div>
+      <div class="card-title">Single Session</div>
+      <div class="card-price">$150</div>
+      <div class="card-duration">Up to 90 min · In-home</div>
+      <div class="card-divider"></div>
+      <div class="card-includes">Includes</div>
+      <ul class="card-list">
+        <li>Travel within Houston service area</li>
+        <li>Hands-on troubleshooting</li>
+        <li>Setup and training</li>
+        <li>Account organization</li>
+        <li>General tech support</li>
+      </ul>
+      <div class="card-note">Additional time billed at $80/hr. Travel surcharge may apply outside standard service area.</div>
+      <div class="card-cta"><a href="https://book.all-tech-connect.com" target="_blank" class="cta-secondary">Book in-home session</a></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PREPAID PACKS -->
+<section class="pricing-section alt" id="packs">
+  <div class="section-header">
+    <div class="section-eyebrow">Prepaid packs</div>
+    <h2 class="section-title">Bundle sessions, save more.</h2>
+    <p class="section-sub">Packs include remote sessions by default and are best for customers with a specific project or who want prepaid flexibility without a monthly commitment.</p>
+  </div>
+  <div class="card-grid">
+
+    <div class="pricing-card">
+      <div class="card-label">Setup Pack</div>
+      <div class="card-title">3 Sessions</div>
+      <div class="card-price">$199</div>
+      <div class="card-duration">Valid 90 days · ~$66/session</div>
+      <div class="card-best-for">Best for getting a few things set up correctly from the start.</div>
+      <div class="card-divider"></div>
+      <div class="card-includes">Good for</div>
+      <ul class="card-list">
+        <li>New device setup</li>
+        <li>Email and account setup</li>
+        <li>Printer setup</li>
+        <li>Password manager setup</li>
+        <li>Cloud storage setup</li>
+        <li>Basic training</li>
+      </ul>
+      <div class="card-cta"><a href="https://book.all-tech-connect.com" target="_blank" class="cta-secondary">Book setup pack</a></div>
+    </div>
+
+    <div class="pricing-card featured">
+      <div class="featured-badge">Best value</div>
+      <div class="card-label">Support Pack</div>
+      <div class="card-title">6 Sessions</div>
+      <div class="card-price">$375</div>
+      <div class="card-duration">Valid 120 days · $62.50/session</div>
+      <div class="card-best-for">Best for customers who need help more than once but don't need a monthly plan.</div>
+      <div class="card-divider"></div>
+      <div class="card-includes">Good for</div>
+      <ul class="card-list">
+        <li>Troubleshooting</li>
+        <li>Device cleanup</li>
+        <li>Software updates</li>
+        <li>Backup setup and review</li>
+        <li>Cloud storage cleanup</li>
+        <li>Recurring tech questions</li>
+      </ul>
+      <div class="card-cta"><a href="https://book.all-tech-connect.com" target="_blank" class="cta-primary">Book support pack</a></div>
+    </div>
+
+    <div class="pricing-card">
+      <div class="card-label">Strategy Pack</div>
+      <div class="card-title">9 Sessions</div>
+      <div class="card-price">$525</div>
+      <div class="card-duration">Valid 180 days · ~$58/session</div>
+      <div class="card-best-for">Best for improving your overall tech setup without starting a monthly plan.</div>
+      <div class="card-divider"></div>
+      <div class="card-includes">Good for</div>
+      <ul class="card-list">
+        <li>Planning upgrades</li>
+        <li>Simplifying devices and accounts</li>
+        <li>Improving workflows</li>
+        <li>Setting up backup systems</li>
+        <li>Learning AI tools</li>
+        <li>Making better tech decisions</li>
+      </ul>
+      <div class="card-cta"><a href="https://book.all-tech-connect.com" target="_blank" class="cta-secondary">Book strategy pack</a></div>
+    </div>
+
+  </div>
+
+  <!-- In-Home Upgrade Banner -->
+  <div class="inhome-banner">
+    <div>
+      <h4>Need in-home help with your Pack?</h4>
+      <p>Packs include remote sessions by default. Use an included session and add the in-home upgrade to get hands-on help at your location.</p>
+    </div>
+    <div class="inhome-badge">
+      <div class="price">+$75</div>
+      <div class="label">per in-home visit</div>
+    </div>
+  </div>
+</section>
+
+<!-- MONTHLY PLANS -->
+<section class="pricing-section" id="plans">
+  <div class="section-header">
+    <div class="section-eyebrow">Monthly plans</div>
+    <h2 class="section-title">Ongoing support, priority access.</h2>
+    <p class="section-sub">Plans are best for customers who want a trusted tech contact they can rely on throughout the year.</p>
+  </div>
+  <div class="card-grid">
+
+    <div class="pricing-card">
+      <div class="card-label">Setup Plan</div>
+      <div class="card-title">Light Support</div>
+      <div class="card-price">$149<span>/mo</span></div>
+      <div class="card-duration">1 session/month</div>
+      <div class="card-best-for">For customers who want light ongoing support and basic tech peace of mind.</div>
+      <div class="card-divider"></div>
+      <div class="card-includes">Includes</div>
+      <ul class="card-list">
+        <li>1 remote session per month</li>
+        <li>Light text and email support</li>
+        <li>Response within 1 business day</li>
+        <li>New purchase guidance</li>
+        <li>10% off eligible installs</li>
+      </ul>
+      <div class="card-cta"><a href="https://book.all-tech-connect.com" target="_blank" class="cta-secondary">Start setup plan</a></div>
+    </div>
+
+    <div class="pricing-card featured">
+      <div class="featured-badge">Most popular</div>
+      <div class="card-label">Support Plan</div>
+      <div class="card-title">Regular Support</div>
+      <div class="card-price">$299<span>/mo</span></div>
+      <div class="card-duration">Up to 2 sessions/month</div>
+      <div class="card-best-for">For customers who want consistent help, faster access, and proactive reminders.</div>
+      <div class="card-divider"></div>
+      <div class="card-includes">Includes</div>
+      <ul class="card-list">
+        <li>Up to 2 remote sessions/month</li>
+        <li>Priority booking</li>
+        <li>Same-business-day response</li>
+        <li>Quarterly tech review</li>
+        <li>Backup setup and check-ins</li>
+        <li>Security update reminders</li>
+        <li>15% off eligible installs</li>
+      </ul>
+      <div class="card-cta"><a href="https://book.all-tech-connect.com" target="_blank" class="cta-primary">Start support plan</a></div>
+    </div>
+
+    <div class="pricing-card">
+      <div class="card-label">Strategy Plan</div>
+      <div class="card-title">Proactive Support</div>
+      <div class="card-price">$499<span>/mo</span></div>
+      <div class="card-duration">Up to 4 sessions/month</div>
+      <div class="card-best-for">For customers who want proactive support, planning, and a more organized long-term tech setup.</div>
+      <div class="card-divider"></div>
+      <div class="card-includes">Includes</div>
+      <ul class="card-list">
+        <li>Up to 4 remote sessions/month</li>
+        <li>Priority access</li>
+        <li>Monthly check-in</li>
+        <li>Tech roadmap support</li>
+        <li>AI tools onboarding</li>
+        <li>Vendor recommendations</li>
+        <li>Evening appointments by request</li>
+        <li>15% off eligible installs</li>
+      </ul>
+      <div class="card-cta"><a href="https://book.all-tech-connect.com" target="_blank" class="cta-secondary">Start strategy plan</a></div>
+    </div>
+
+  </div>
+
+  <!-- In-Home Upgrade Banner -->
+  <div class="inhome-banner">
+    <div>
+      <h4>Need in-home help with your Plan?</h4>
+      <p>Plans include remote sessions by default. Add the in-home upgrade to any included session for hands-on help at your location.</p>
+    </div>
+    <div class="inhome-badge">
+      <div class="price">+$75</div>
+      <div class="label">per in-home visit</div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTALLS & ADD-ONS -->
+<section class="pricing-section alt" id="installs">
+  <div class="section-header">
+    <div class="section-eyebrow">Installs &amp; add-ons</div>
+    <h2 class="section-title">Smart home installation.</h2>
+    <p class="section-sub">Need help installing smart home devices or setting up new equipment? Standard installs and starter packages are available.</p>
+  </div>
+  <div class="card-grid two-col">
+
+    <div class="pricing-card">
+      <div class="card-label">Standard Install</div>
+      <div class="card-title">Install Visit</div>
+      <div class="card-price">$130<span> min</span></div>
+      <div class="card-duration">In-home · First device included</div>
+      <div class="card-divider"></div>
+      <div class="card-includes">Includes</div>
+      <ul class="card-list">
+        <li>Visit and first standard device install</li>
+        <li>Basic app setup</li>
+        <li>Basic walkthrough</li>
+        <li>Additional devices: $50 each</li>
+      </ul>
+      <div class="card-note">Complex work (account recovery, WiFi issues, wiring, electrical) billed at $80/hr. Client responsible for all devices and account logins.</div>
+      <div class="card-cta"><a href="https://book.all-tech-connect.com" target="_blank" class="cta-secondary">Book install visit</a></div>
+    </div>
+
+    <div class="pricing-card featured">
+      <div class="featured-badge">Bundle deal</div>
+      <div class="card-label">Smart Home Starter</div>
+      <div class="card-title">3-Device Bundle</div>
+      <div class="card-price">$399</div>
+      <div class="card-duration">Up to 3 hours on-site</div>
+      <div class="card-divider"></div>
+      <div class="card-includes">Includes installation of</div>
+      <ul class="card-list">
+        <li>One smart doorbell</li>
+        <li>One smart lock</li>
+        <li>One smart thermostat</li>
+        <li>App setup for all devices</li>
+        <li>Basic walkthrough</li>
+      </ul>
+      <div class="card-note">Standard installation only. Electrical work, wiring issues, or door modifications billed at $80/hr. Plan discounts may apply.</div>
+      <div class="card-cta"><a href="https://book.all-tech-connect.com" target="_blank" class="cta-primary">Book smart home starter</a></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROFESSIONAL / BUSINESS SUPPORT -->
+<section class="pricing-section" id="business">
+  <div class="section-header">
+    <div class="section-eyebrow">Professional support</div>
+    <h2 class="section-title">For small teams and busy professionals.</h2>
+    <p class="section-sub">More consistent, higher-touch support scoped around your needs. All professional plans start with a free consultation.</p>
+  </div>
+  <div class="card-grid">
+
+    <div class="pricing-card">
+      <div class="card-label">Executive</div>
+      <div class="card-title">Executive Tech Support</div>
+      <div class="card-price">$499<span>/mo+</span></div>
+      <div class="card-duration">Starting at · 3 hrs/month</div>
+      <div class="card-best-for">For business owners, executives, and busy professionals who want trusted personal tech support.</div>
+      <div class="card-divider"></div>
+      <div class="card-includes">Includes</div>
+      <ul class="card-list">
+        <li>Up to 3 support hours/month</li>
+        <li>Priority scheduling</li>
+        <li>Same-business-day response</li>
+        <li>AI tools onboarding</li>
+        <li>Device ecosystem planning</li>
+        <li>Travel tech prep</li>
+        <li>Password manager and account org</li>
+        <li>Additional support at $100/hr</li>
+      </ul>
+      <div class="card-cta"><a href="https://book.all-tech-connect.com" target="_blank" class="cta-secondary">Request consultation</a></div>
+    </div>
+
+    <div class="pricing-card featured">
+      <div class="featured-badge">For small teams</div>
+      <div class="card-label">Small Business</div>
+      <div class="card-title">Small Business Support</div>
+      <div class="card-price">$799<span>/mo+</span></div>
+      <div class="card-duration">Starting at · Up to 5 users</div>
+      <div class="card-best-for">For small teams that need tech support, training, and guidance without hiring full-time IT.</div>
+      <div class="card-divider"></div>
+      <div class="card-includes">Includes</div>
+      <ul class="card-list">
+        <li>Up to 5 users</li>
+        <li>Up to 4 support hours/month</li>
+        <li>Same-business-day response</li>
+        <li>Monthly tech check-in</li>
+        <li>New employee setup guidance</li>
+        <li>Backup setup and check-ins</li>
+        <li>Cybersecurity basics review</li>
+        <li>Additional support at $100/hr</li>
+      </ul>
+      <div class="card-cta"><a href="https://book.all-tech-connect.com" target="_blank" class="cta-primary">Request consultation</a></div>
+    </div>
+
+    <div class="pricing-card">
+      <div class="card-label">Custom</div>
+      <div class="card-title">Business Strategy</div>
+      <div class="card-price" style="font-size:26px;">Custom</div>
+      <div class="card-duration">Scoped after consultation</div>
+      <div class="card-best-for">For businesses that need more involved planning, AI onboarding, documentation, or team training.</div>
+      <div class="card-divider"></div>
+      <div class="card-includes">May include</div>
+      <ul class="card-list">
+        <li>Custom monthly support hours</li>
+        <li>Technology documentation</li>
+        <li>Tech roadmap support</li>
+        <li>Team training</li>
+        <li>AI tools onboarding</li>
+        <li>Vendor recommendations</li>
+        <li>New employee onboarding support</li>
+      </ul>
+      <div class="card-cta"><a href="https://book.all-tech-connect.com" target="_blank" class="cta-secondary">Request consultation</a></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- GIFT CARDS -->
+<section class="pricing-section alt">
+  <div class="section-header">
+    <div class="section-eyebrow">Gift cards</div>
+    <h2 class="section-title">Give the gift of working tech.</h2>
+    <p class="section-sub">Digital delivery by email. Valid for 12 months. Applies toward any All Tech Connect service.</p>
+  </div>
+  <div class="card-grid four-col">
+    <div class="pricing-card" style="text-align:center;">
+      <div class="card-price">$75</div>
+      <div class="card-label" style="margin-top:6px;">Remote session</div>
+      <div style="margin-top:auto; padding-top:20px;"><a href="https://book.all-tech-connect.com" target="_blank" class="btn btn-secondary" style="width:100%; justify-content:center; font-size:14px;">Buy gift card</a></div>
+    </div>
+    <div class="pricing-card" style="text-align:center;">
+      <div class="card-price">$150</div>
+      <div class="card-label" style="margin-top:6px;">In-home help</div>
+      <div style="margin-top:auto; padding-top:20px;"><a href="https://book.all-tech-connect.com" target="_blank" class="btn btn-secondary" style="width:100%; justify-content:center; font-size:14px;">Buy gift card</a></div>
+    </div>
+    <div class="pricing-card" style="text-align:center;">
+      <div class="card-price">$199</div>
+      <div class="card-label" style="margin-top:6px;">Setup pack</div>
+      <div style="margin-top:auto; padding-top:20px;"><a href="https://book.all-tech-connect.com" target="_blank" class="btn btn-secondary" style="width:100%; justify-content:center; font-size:14px;">Buy gift card</a></div>
+    </div>
+    <div class="pricing-card" style="text-align:center;">
+      <div class="card-price">$375</div>
+      <div class="card-label" style="margin-top:6px;">Support pack</div>
+      <div style="margin-top:auto; padding-top:20px;"><a href="https://book.all-tech-connect.com" target="_blank" class="btn btn-secondary" style="width:100%; justify-content:center; font-size:14px;">Buy gift card</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE NOTES -->
+<section class="service-notes">
+  <div class="section-header">
+    <div class="section-eyebrow">Good to know</div>
+    <h2 class="section-title">Service notes.</h2>
+    <p class="section-sub">The fine print, written in plain English.</p>
+  </div>
+  <div class="accordion">
+
+    <div class="accordion-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        Remote session scope
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-body">
+        A remote session includes up to 60 minutes of focused tech help via Zoom, Zoho Meeting, FaceTime, phone, or another agreed method. Additional time is billed in 15-minute increments at the applicable hourly rate. Issues requiring extensive research, third-party vendor support, account recovery, hardware repair, or in-home work may require an additional session or separate quote.
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        Monthly plan boundaries
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-body">
+        Monthly plans include the number of sessions listed. Unused sessions do not roll over unless otherwise agreed in writing. Light text and email support covers simple questions, scheduling, basic guidance, and follow-up clarification. Troubleshooting that requires screen sharing, step-by-step support, or research may count as a session or be billed separately.
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        Backup support
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-body">
+        Backup support includes setup, review, and periodic check-ins. It does not guarantee data recovery or replace the customer's responsibility to maintain active backup services and account access.
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        Evening and after-hours support
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-body">
+        Evening appointments may be available by request up to 9pm. After-hours availability is not guaranteed unless specifically included in your plan or agreed in advance. Response times apply during normal business hours (Tuesday–Saturday, 10am–7pm Central) unless otherwise stated.
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        Cancellation and rescheduling
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-body">
+        Appointments may be rescheduled with at least 24 hours' notice. Same-day cancellations, missed appointments, or no-shows may result in forfeiture of the session or booking fee. For in-home appointments, the visit fee may be retained if the appointment is canceled after travel has begun or if the client is unavailable at the scheduled time. All Tech Connect understands that emergencies happen and may make exceptions at its discretion.
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        Business support boundaries
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-body">
+        All Tech Connect provides light business tech support, setup help, training, documentation, and advisory support. It does not replace managed IT, emergency support, cybersecurity monitoring, network administration, or full-time help desk coverage unless specifically agreed in writing.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="section-header">
+    <div class="section-eyebrow">FAQ</div>
+    <h2 class="section-title">Common questions.</h2>
+  </div>
+  <div class="faq-grid">
+
+    <div class="faq-item">
+      <h4>Do I need a Pack or a Plan?</h4>
+      <p>Choose a Pack if you have a specific project or want prepaid sessions without a monthly commitment. Choose a Plan if you want ongoing support, priority access, and peace of mind throughout the year.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Are Packs and Plans remote or in-home?</h4>
+      <p>Both include remote sessions by default. If you need in-home help, you can use an included session and add the $75 in-home visit upgrade.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Do monthly sessions roll over?</h4>
+      <p>Monthly sessions do not roll over by default unless otherwise agreed in writing.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Do Plans include unlimited text and email support?</h4>
+      <p>No. Plans include light support for simple questions, scheduling, basic guidance, and follow-up clarification. Troubleshooting that requires screen sharing, research, or step-by-step support may count as a session or be billed separately.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Do you guarantee data recovery?</h4>
+      <p>No. Backup support includes setup, review, and periodic check-ins. It does not guarantee data recovery or replace the customer's responsibility to maintain active backup services.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Do you provide business IT support?</h4>
+      <p>All Tech Connect provides light business tech support, setup, training, and advisory help. It does not replace managed IT, emergency support, cybersecurity monitoring, or full-time help desk coverage unless specifically agreed in writing.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Can I do evening appointments?</h4>
+      <p>Evening appointments may be available by request up to 9pm. Availability is not guaranteed unless specifically included in your plan.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Not sure what you need?</h4>
+      <p>That's exactly what the free consultation is for. Twenty minutes, no obligation — we'll figure out the right fit together.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="final-cta-inner">
+    <h2>Not sure where to start?</h2>
+    <p>The first call is free, friendly, and only takes 20 minutes. No sales pitch, no commitment.</p>
+    <a href="https://book.all-tech-connect.com" target="_blank" class="btn btn-primary btn-large">Book your free consultation</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="logo.png" alt="All Tech Connect">
+      </div>
+      <p>Your personal tech concierge. Houston, TX. Tuesday through Saturday, 10am to 7pm Central.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="#individuals">For individuals</a>
+      <a href="#business">For business</a>
+      <a href="#installs">Smart home</a>
+      <a href="#strategy">AI consulting</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="about.html">About</a>
+      <a href="services-pricing.html">Pricing</a>
+    </div>
+    <div class="footer-col">
+      <h4>Get in touch</h4>
+      <a href="tel:8329002045">(832) 900-2045</a>
+      <a href="mailto:spencer@all-tech-connect.com">spencer@all-tech-connect.com</a>
+      <a href="https://book.all-tech-connect.com" target="_blank">Book a call</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 All Tech Connect, LLC. Houston, TX.</div>
+    <div>Setup. Support. Strategy.</div>
+  </div>
+</footer>
+
+<script>
+function toggleAccordion(btn) {
+  const body = btn.nextElementSibling;
+  const isOpen = body.classList.contains('open');
+  // Close all
+  document.querySelectorAll('.accordion-body').forEach(b => b.classList.remove('open'));
+  document.querySelectorAll('.accordion-btn').forEach(b => b.classList.remove('open'));
+  // Open this one if it was closed
+  if (!isOpen) {
+    body.classList.add('open');
+    btn.classList.add('open');
+  }
+}
+</script>
+
+</body>
+</html>
