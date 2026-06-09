@@ -83,10 +83,12 @@ h1, h2, h3, h4 {
   justify-content: center;
   flex-shrink: 0;
 }
-.logo-mark img {
-  width: 22px;
-  height: 22px;
-  object-fit: contain;
+.hero-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #017ce7 0%, #1aadbc 50%, #88d04b 100%);
+  margin: 0 auto 28px;
 }
 .logo-wordmark {
   font-family: 'Outfit', system-ui, sans-serif;
@@ -484,9 +486,7 @@ footer {
 <nav class="nav">
   <div class="nav-inner">
     <a href="index.html" class="logo">
-      <div class="logo-mark">
-        <img src="favicon.png" alt="">
-      </div>
+      <div class="logo-mark"></div>
       <span class="logo-wordmark">AllTechConnect</span>
     </a>
     <div class="nav-links">
@@ -500,6 +500,7 @@ footer {
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
+    <div class="hero-icon"></div>
     <h1 class="hero-title">Your personal tech concierge.</h1>
     <p class="hero-sub">For work. For home. For everything in between.</p>
     <div class="hero-cta">
