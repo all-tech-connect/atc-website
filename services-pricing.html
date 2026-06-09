@@ -62,8 +62,10 @@ h1, h2, h3, h4 {
   display: flex; align-items: center; justify-content: space-between;
   padding: 14px 24px; max-width: 1120px; margin: 0 auto;
 }
-.logo { display: flex; align-items: center; text-decoration: none; }
-.logo img { height: 36px; width: auto; }
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.logo-mark { width: 36px; height: 36px; border-radius: 8px; background: linear-gradient(135deg, #017ce7 0%, #1aadbc 50%, #88d04b 100%); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.logo-mark img { width: 22px; height: 22px; object-fit: contain; }
+.logo-wordmark { font-family: 'Outfit', system-ui, sans-serif; font-weight: 600; font-size: 17px; color: var(--navy); letter-spacing: -0.02em; line-height: 1; }
 .nav-links { display: flex; align-items: center; gap: 32px; }
 .nav-links a { color: var(--gray-700); text-decoration: none; font-size: 15px; font-weight: 500; transition: color 0.2s; }
 .nav-links a:hover { color: var(--navy); }
@@ -324,7 +326,10 @@ footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 60px 24p
   gap: 40px; padding-bottom: 40px;
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
-.footer-logo img { height: 32px; width: auto; filter: brightness(0) invert(1); opacity: 0.9; }
+.footer-logo { display: flex; align-items: center; gap: 10px; }
+.footer-logo .logo-mark { width: 32px; height: 32px; border-radius: 7px; flex-shrink: 0; }
+.footer-logo .logo-mark img { width: 19px; height: 19px; }
+.footer-wordmark { font-family: 'Outfit', system-ui, sans-serif; font-weight: 600; font-size: 16px; color: white; letter-spacing: -0.02em; line-height: 1; }
 .footer-brand p { margin-top: 14px; font-size: 14px; color: rgba(255,255,255,0.5); max-width: 280px; line-height: 1.6; }
 .footer-col h4 { color: white; font-size: 14px; font-family: 'DM Sans', sans-serif; font-weight: 600; margin-bottom: 16px; }
 .footer-col a { display: block; color: rgba(255,255,255,0.6); text-decoration: none; padding: 4px 0; font-size: 14px; }
@@ -352,7 +357,10 @@ footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 60px 24p
 <nav class="nav">
   <div class="nav-inner">
     <a href="index.html" class="logo">
-      <img src="logo.png" alt="All Tech Connect">
+      <div class="logo-mark">
+        <img src="icon-white.png" alt="">
+      </div>
+      <span class="logo-wordmark">AllTechConnect</span>
     </a>
     <div class="nav-links">
       <a href="services-pricing.html" class="active">Services &amp; Pricing</a>
@@ -990,7 +998,10 @@ footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 60px 24p
   <div class="footer-inner">
     <div class="footer-brand">
       <div class="footer-logo">
-        <img src="logo.png" alt="All Tech Connect">
+        <div class="logo-mark">
+          <img src="icon-white.png" alt="">
+        </div>
+        <span class="footer-wordmark">AllTechConnect</span>
       </div>
       <p>Your personal tech concierge. Houston, TX. Tuesday through Saturday, 10am to 7pm Central.</p>
     </div>
