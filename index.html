@@ -446,7 +446,29 @@ footer {
   padding-bottom: 40px;
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
-.footer-logo img { height: 32px; width: auto; opacity: 0.9; }
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer-logo .logo-mark {
+  width: 32px;
+  height: 32px;
+  border-radius: 7px;
+  flex-shrink: 0;
+}
+.footer-logo .logo-mark img {
+  width: 19px;
+  height: 19px;
+}
+.footer-wordmark {
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: white;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
 .footer-brand p {
   margin-top: 14px;
   font-size: 14px;
@@ -705,7 +727,10 @@ footer {
   <div class="footer-inner">
     <div class="footer-brand">
       <div class="footer-logo">
-        <img src="logo.png" alt="All Tech Connect">
+        <div class="logo-mark">
+          <img src="icon-white.png" alt="">
+        </div>
+        <span class="footer-wordmark">AllTechConnect</span>
       </div>
       <p>Your personal tech concierge. Houston, TX. Tuesday through Saturday, 10am to 7pm Central.</p>
     </div>
