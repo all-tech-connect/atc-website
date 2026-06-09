@@ -70,11 +70,31 @@ h1, h2, h3, h4 {
 .logo {
   display: flex;
   align-items: center;
+  gap: 10px;
   text-decoration: none;
 }
-.logo img {
-  height: 48px;
-  width: auto;
+.logo-mark {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #017ce7 0%, #1aadbc 50%, #88d04b 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.logo-mark img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+.logo-wordmark {
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--navy);
+  letter-spacing: -0.02em;
+  line-height: 1;
 }
 .nav-links {
   display: flex;
@@ -464,7 +484,10 @@ footer {
 <nav class="nav">
   <div class="nav-inner">
     <a href="index.html" class="logo">
-      <img src="logo.png" alt="All Tech Connect">
+      <div class="logo-mark">
+        <img src="favicon.png" alt="">
+      </div>
+      <span class="logo-wordmark">AllTechConnect</span>
     </a>
     <div class="nav-links">
       <a href="services-pricing.html">Services &amp; Pricing</a>
