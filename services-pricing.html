@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Services &amp; Pricing | All Tech Connect</title>
-<meta name="description" content="Simple tech help for homes, professionals, and small businesses. Remote and in-home support, smart home installs, prepaid packs, monthly plans, and business tech support in Houston.">
+<meta name="description" content="Simple tech help, ongoing support plans, and practical AI integration for home, work, and small business. Remote and in-home support in Houston.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="favicon_180.png">
@@ -134,7 +134,7 @@ h1, h2, h3, h4 {
 .pillar-card ul li { font-size: 14px; color: var(--gray-700); padding: 4px 0; padding-left: 16px; position: relative; }
 .pillar-card ul li::before { content: '→'; position: absolute; left: 0; color: var(--gray-300); font-size: 12px; }
 
-/* === PACKS VS PLANS === */
+/* === HOW TO CHOOSE === */
 .packs-plans-explainer {
   padding: 80px 24px;
   background: var(--gray-50);
@@ -268,6 +268,61 @@ h1, h2, h3, h4 {
 .inhome-badge .price { font-family: 'Outfit', sans-serif; font-size: 28px; font-weight: 700; color: white; }
 .inhome-badge .label { font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 2px; }
 
+/* === PACK SUB-HEADER === */
+.pack-sub-header {
+  max-width: 1080px;
+  margin: 64px auto 40px;
+  padding-top: 48px;
+  border-top: 1px solid var(--gray-200);
+}
+.pack-sub-header h3 {
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+.pack-sub-header p {
+  font-size: 16px;
+  color: var(--gray-700);
+}
+
+/* === BOUNDARY NOTE === */
+.boundary-note {
+  max-width: 1080px;
+  margin: 32px auto 0;
+  background: rgba(1,124,231,0.04);
+  border: 1px solid rgba(1,124,231,0.14);
+  border-radius: 12px;
+  padding: 16px 24px;
+  font-size: 14px;
+  color: var(--gray-700);
+  line-height: 1.65;
+}
+
+/* === LINK CALLOUT === */
+.link-callout {
+  max-width: 1080px;
+  margin: 32px auto 0;
+  padding: 20px 28px;
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  font-size: 15px;
+  color: var(--gray-700);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.link-callout a {
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.link-callout a:hover { text-decoration: underline; }
+
 /* === SERVICE NOTES ACCORDION === */
 .service-notes {
   padding: 80px 24px;
@@ -319,6 +374,9 @@ h1, h2, h3, h4 {
 .final-cta-inner { max-width: 640px; margin: 0 auto; }
 .final-cta h2 { font-size: clamp(32px, 5vw, 46px); font-weight: 600; margin-bottom: 18px; color: white; }
 .final-cta p { font-size: 18px; color: rgba(255,255,255,0.7); margin-bottom: 32px; }
+.final-cta-secondary { margin-top: 40px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.final-cta-secondary a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 15px; }
+.final-cta-secondary a:hover { color: white; }
 
 /* === FOOTER === */
 footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 60px 24px 40px; font-size: 14px; }
@@ -350,6 +408,7 @@ footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 60px 24p
   .pricing-section { padding: 60px 24px; }
   .page-hero { padding: 60px 24px 40px; }
   .inhome-banner { flex-direction: column; text-align: center; }
+  .link-callout { flex-direction: column; gap: 12px; }
 }
 </style>
 </head>
@@ -376,10 +435,10 @@ footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 60px 24p
 <section class="page-hero">
   <div class="section-eyebrow">Services &amp; Pricing</div>
   <h1>Simple tech help for your home, work, and everyday life.</h1>
-  <p>Remote and in-home support available in the Houston area. Clear pricing, no surprises.</p>
+  <p>Remote and in-home support in the Houston area. Clear pricing, no surprises.</p>
   <div class="hero-cta">
     <a href="https://book.all-tech-connect.com" target="_blank" class="btn btn-primary btn-large">Book free consultation</a>
-    <a href="#one-time" class="btn btn-secondary btn-large">View pricing</a>
+    <a href="#setup" class="btn btn-secondary btn-large">View pricing</a>
   </div>
 </section>
 
@@ -391,7 +450,7 @@ footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 60px 24p
     <p class="section-sub">Whether you need help getting started, staying on track, or building something better long-term — there's a path for you.</p>
   </div>
   <div class="pillars-grid">
-    <div class="pillar-card blue" id="setup">
+    <div class="pillar-card blue">
       <div class="sub">01 — Setup</div>
       <h3>Get it working right.</h3>
       <p>Best for getting started. New device, new home, new system — I make sure it's set up correctly and you actually know how to use it.</p>
@@ -405,7 +464,7 @@ footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 60px 24p
         <li>Basic training</li>
       </ul>
     </div>
-    <div class="pillar-card teal" id="support">
+    <div class="pillar-card teal">
       <div class="sub">02 — Support</div>
       <h3>Help when you're stuck.</h3>
       <p>Best for keeping things working. Something broke, something's slow, or you just need a second set of eyes. Remote or in-home.</p>
@@ -421,14 +480,14 @@ footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 60px 24p
     </div>
     <div class="pillar-card green" id="strategy">
       <div class="sub">03 — Strategy</div>
-      <h3>Build something that scales.</h3>
-      <p>Best for improving your overall setup. Tech planning, AI tools, workflows, and vendor decisions that fit how you actually work.</p>
+      <h3>Improve how you work with tech.</h3>
+      <p>Best for AI integration, workflow improvement, and long-term tech planning. Session-based or ongoing.</p>
       <ul>
         <li>Tech roadmap</li>
-        <li>AI tools onboarding</li>
+        <li>AI tools setup and workflow design</li>
+        <li>Google Workspace and Microsoft 365</li>
         <li>Workflow improvement</li>
         <li>Device ecosystem planning</li>
-        <li>Smart home planning</li>
         <li>Vendor recommendations</li>
         <li>Backup strategy and check-ins</li>
       </ul>
@@ -436,61 +495,58 @@ footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 60px 24p
   </div>
 </section>
 
-<!-- PACKS VS PLANS -->
+<!-- HOW TO CHOOSE -->
 <section class="packs-plans-explainer">
   <div class="section-header">
     <div class="section-eyebrow">How to choose</div>
-    <h2 class="section-title">Packs are for projects. Plans are for peace of mind.</h2>
-    <p class="section-sub">Two simple ways to get help beyond a single session.</p>
+    <h2 class="section-title">Find your fit.</h2>
+    <p class="section-sub">A quick guide to picking the right option.</p>
   </div>
   <div class="compare-table">
     <table>
       <thead>
         <tr>
-          <th>Choose a Pack if...</th>
-          <th>Choose a Plan if...</th>
+          <th>If you...</th>
+          <th>Start here</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>You want prepaid sessions without a monthly commitment</td>
-          <td>You want ongoing support and priority access</td>
+          <td>Need help with one specific thing</td>
+          <td>Single Session &mdash; $75/hr remote &middot; $150 in-home</td>
         </tr>
         <tr>
-          <td>You have a specific project to complete</td>
-          <td>You want help available throughout the year</td>
+          <td>Have a few things to set up or work through</td>
+          <td>Setup Pack (3 sessions) or Support Pack (6 sessions)</td>
         </tr>
         <tr>
-          <td>You want to save compared to booking one session at a time</td>
-          <td>You want proactive check-ins and guidance</td>
+          <td>Want a tech contact you can reach when things come up</td>
+          <td>Support Plan &mdash; starting at $149/mo</td>
         </tr>
         <tr>
-          <td>You're comfortable scheduling when you need help</td>
-          <td>You want a trusted tech contact ready when issues come up</td>
-        </tr>
-        <tr>
-          <td>You need flexibility but not ongoing access</td>
-          <td>You want peace of mind and relationship-based support</td>
+          <td>Want to use AI or improve how you work with technology</td>
+          <td>Strategy Session ($250) or AI Workflow Audit</td>
         </tr>
       </tbody>
     </table>
   </div>
 </section>
 
-<!-- ONE-TIME HELP -->
-<section class="pricing-section" id="one-time">
+<!-- SETUP (SESSIONS + PACKS) -->
+<section class="pricing-section" id="setup">
   <div class="section-header">
-    <div class="section-eyebrow">One-time help</div>
-    <h2 class="section-title">Start simple.</h2>
-    <p class="section-sub">Need help with one issue or want to try before committing? Book a consultation, remote session, or in-home visit.</p>
+    <div class="section-eyebrow">Setup</div>
+    <h2 class="section-title">Flexible help, when you need it.</h2>
+    <p class="section-sub">Pay-as-you-go sessions and prepaid packs. Book a single session, or bundle a few if you have more to work through.</p>
   </div>
+
   <div class="card-grid">
 
     <div class="pricing-card">
       <div class="card-label">Free</div>
       <div class="card-title">Consultation</div>
       <div class="card-price">$0</div>
-      <div class="card-duration">20–30 min · Phone or video</div>
+      <div class="card-duration">20&ndash;30 min &middot; Phone or video</div>
       <div class="card-divider"></div>
       <div class="card-includes">Includes</div>
       <ul class="card-list">
@@ -507,15 +563,16 @@ footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 60px 24p
       <div class="featured-badge">Most popular</div>
       <div class="card-label">Remote</div>
       <div class="card-title">Single Session</div>
-      <div class="card-price">$75</div>
-      <div class="card-duration">1 hour · Remote</div>
+      <div class="card-price">$75<span>/hr</span></div>
+      <div class="card-duration">Billed by the hour &middot; Remote</div>
       <div class="card-divider"></div>
-      <div class="card-includes">Includes</div>
+      <div class="card-includes">Good for</div>
       <ul class="card-list">
         <li>Troubleshooting</li>
         <li>Setup and training</li>
         <li>Account organization</li>
-        <li>Purchase guidance</li>
+        <li>Password and security help</li>
+        <li>AI tool orientation</li>
         <li>General tech support</li>
       </ul>
       <div class="card-note">Additional time billed at $75/hr in 15-min increments.</div>
@@ -525,48 +582,47 @@ footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 60px 24p
     <div class="pricing-card">
       <div class="card-label">In-Home</div>
       <div class="card-title">Single Session</div>
-      <div class="card-price">$150</div>
-      <div class="card-duration">Up to 90 min · In-home</div>
+      <div class="card-price">$150<span> min</span></div>
+      <div class="card-duration">Minimum price &middot; Includes up to 90 min</div>
       <div class="card-divider"></div>
-      <div class="card-includes">Includes</div>
+      <div class="card-includes">Good for</div>
       <ul class="card-list">
         <li>Travel within Houston service area</li>
         <li>Hands-on troubleshooting</li>
-        <li>Setup and training</li>
-        <li>Account organization</li>
+        <li>Device setup and training</li>
+        <li>Printer and WiFi help</li>
+        <li>Smart home support</li>
         <li>General tech support</li>
       </ul>
-      <div class="card-note">Additional time billed at $80/hr. Travel surcharge may apply outside standard service area.</div>
+      <div class="card-note">Additional time billed at $80/hr in 15-min increments. Travel surcharge may apply outside standard service area.</div>
       <div class="card-cta"><a href="https://book.all-tech-connect.com" target="_blank" class="cta-secondary">Book in-home session</a></div>
     </div>
 
   </div>
-</section>
 
-<!-- PREPAID PACKS -->
-<section class="pricing-section alt" id="packs">
-  <div class="section-header">
-    <div class="section-eyebrow">Prepaid packs</div>
-    <h2 class="section-title">Bundle sessions, save more.</h2>
-    <p class="section-sub">Packs include remote sessions by default and are best for customers with a specific project or who want prepaid flexibility without a monthly commitment.</p>
+  <!-- Packs sub-section -->
+  <div class="pack-sub-header" id="packs">
+    <h3>Prepaid packs</h3>
+    <p>Bundle sessions and save. Packs include remote sessions by default, no monthly commitment.</p>
   </div>
-  <div class="card-grid">
+
+  <div class="card-grid two-col">
 
     <div class="pricing-card">
       <div class="card-label">Setup Pack</div>
       <div class="card-title">3 Sessions</div>
-      <div class="card-price">$199</div>
-      <div class="card-duration">Valid 90 days · ~$66/session</div>
-      <div class="card-best-for">Best for getting a few things set up correctly from the start.</div>
+      <div class="card-price">$225</div>
+      <div class="card-duration">Valid 90 days &middot; $75/session</div>
+      <div class="card-best-for">Best for getting a few things set up right from the start.</div>
       <div class="card-divider"></div>
       <div class="card-includes">Good for</div>
       <ul class="card-list">
         <li>New device setup</li>
         <li>Email and account setup</li>
-        <li>Printer setup</li>
+        <li>Printer and WiFi setup</li>
         <li>Password manager setup</li>
         <li>Cloud storage setup</li>
-        <li>Basic training</li>
+        <li>Multi-session training</li>
       </ul>
       <div class="card-cta"><a href="https://book.all-tech-connect.com" target="_blank" class="cta-secondary">Book setup pack</a></div>
     </div>
@@ -575,39 +631,20 @@ footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 60px 24p
       <div class="featured-badge">Best value</div>
       <div class="card-label">Support Pack</div>
       <div class="card-title">6 Sessions</div>
-      <div class="card-price">$375</div>
-      <div class="card-duration">Valid 120 days · $62.50/session</div>
-      <div class="card-best-for">Best for customers who need help more than once but don't need a monthly plan.</div>
+      <div class="card-price">$425</div>
+      <div class="card-duration">Valid 120 days &middot; ~$71/session</div>
+      <div class="card-best-for">Best for clients who need help more than once but aren't ready for a monthly plan.</div>
       <div class="card-divider"></div>
       <div class="card-includes">Good for</div>
       <ul class="card-list">
-        <li>Troubleshooting</li>
-        <li>Device cleanup</li>
-        <li>Software updates</li>
+        <li>Recurring computer questions</li>
+        <li>Ongoing troubleshooting</li>
+        <li>File and photo organization</li>
+        <li>Account cleanup</li>
         <li>Backup setup and review</li>
-        <li>Cloud storage cleanup</li>
-        <li>Recurring tech questions</li>
+        <li>General tech support as needed</li>
       </ul>
       <div class="card-cta"><a href="https://book.all-tech-connect.com" target="_blank" class="cta-primary">Book support pack</a></div>
-    </div>
-
-    <div class="pricing-card">
-      <div class="card-label">Strategy Pack</div>
-      <div class="card-title">9 Sessions</div>
-      <div class="card-price">$525</div>
-      <div class="card-duration">Valid 180 days · ~$58/session</div>
-      <div class="card-best-for">Best for improving your overall tech setup without starting a monthly plan.</div>
-      <div class="card-divider"></div>
-      <div class="card-includes">Good for</div>
-      <ul class="card-list">
-        <li>Planning upgrades</li>
-        <li>Simplifying devices and accounts</li>
-        <li>Improving workflows</li>
-        <li>Setting up backup systems</li>
-        <li>Learning AI tools</li>
-        <li>Making better tech decisions</li>
-      </ul>
-      <div class="card-cta"><a href="https://book.all-tech-connect.com" target="_blank" class="cta-secondary">Book strategy pack</a></div>
     </div>
 
   </div>
@@ -616,40 +653,48 @@ footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 60px 24p
   <div class="inhome-banner">
     <div>
       <h4>Need in-home help with your Pack?</h4>
-      <p>Packs include remote sessions by default. Use an included session and add the in-home upgrade to get hands-on help at your location.</p>
+      <p>Packs include remote sessions by default. Use an included session and add the in-home upgrade for hands-on help at your location.</p>
     </div>
     <div class="inhome-badge">
       <div class="price">+$75</div>
       <div class="label">per in-home visit</div>
     </div>
   </div>
+
+  <!-- Installs callout -->
+  <div class="link-callout">
+    <span>Looking for smart home installation or device setup? Install services have their own page.</span>
+    <a href="#installs">View install services &rarr;</a>
+  </div>
+
 </section>
 
-<!-- MONTHLY PLANS -->
-<section class="pricing-section" id="plans">
+<!-- SUPPORT PLANS -->
+<section class="pricing-section alt" id="plans">
   <div class="section-header">
-    <div class="section-eyebrow">Monthly plans</div>
-    <h2 class="section-title">Ongoing support, priority access.</h2>
-    <p class="section-sub">Plans are best for customers who want a trusted tech contact they can rely on throughout the year.</p>
+    <div class="section-eyebrow">Support Plans</div>
+    <h2 class="section-title">Ongoing access and same-day responses.</h2>
+    <p class="section-sub">Single sessions are flexible pay-as-you-go help. Support Plans are for clients who want a trusted tech contact they can reach when things come up. As a plan client, you get same-day responses, between-session guidance, and support from someone who already knows your setup.</p>
   </div>
   <div class="card-grid">
 
     <div class="pricing-card">
-      <div class="card-label">Setup Plan</div>
+      <div class="card-label">Support Lite</div>
       <div class="card-title">Light Support</div>
       <div class="card-price">$149<span>/mo</span></div>
       <div class="card-duration">1 session/month</div>
-      <div class="card-best-for">For customers who want light ongoing support and basic tech peace of mind.</div>
+      <div class="card-best-for">For clients who want occasional help and someone they can reach between sessions.</div>
       <div class="card-divider"></div>
       <div class="card-includes">Includes</div>
       <ul class="card-list">
         <li>1 remote session per month</li>
-        <li>Light text and email support</li>
+        <li>Between-session assistance</li>
         <li>Response within 1 business day</li>
+        <li>Session recap after every session</li>
         <li>New purchase guidance</li>
         <li>10% off eligible installs</li>
       </ul>
-      <div class="card-cta"><a href="https://book.all-tech-connect.com" target="_blank" class="cta-secondary">Start setup plan</a></div>
+      <div class="card-cta"><a href="https://book.all-tech-connect.com" target="_blank" class="cta-secondary">Start Support Lite</a></div>
     </div>
 
     <div class="pricing-card featured">
@@ -658,40 +703,42 @@ footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 60px 24p
       <div class="card-title">Regular Support</div>
       <div class="card-price">$299<span>/mo</span></div>
       <div class="card-duration">Up to 2 sessions/month</div>
-      <div class="card-best-for">For customers who want consistent help, faster access, and proactive reminders.</div>
+      <div class="card-best-for">For clients who want consistent help, same-day response, and a tech contact who knows their setup.</div>
       <div class="card-divider"></div>
       <div class="card-includes">Includes</div>
       <ul class="card-list">
         <li>Up to 2 remote sessions/month</li>
-        <li>Priority booking</li>
         <li>Same-business-day response</li>
+        <li>Between-session assistance</li>
+        <li>Session recaps and account notes</li>
         <li>Quarterly tech review</li>
         <li>Backup setup and check-ins</li>
         <li>Security update reminders</li>
         <li>15% off eligible installs</li>
       </ul>
-      <div class="card-cta"><a href="https://book.all-tech-connect.com" target="_blank" class="cta-primary">Start support plan</a></div>
+      <div class="card-cta"><a href="https://book.all-tech-connect.com" target="_blank" class="cta-primary">Start Support Plan</a></div>
     </div>
 
     <div class="pricing-card">
-      <div class="card-label">Strategy Plan</div>
+      <div class="card-label">Strategy Support</div>
       <div class="card-title">Proactive Support</div>
       <div class="card-price">$499<span>/mo</span></div>
       <div class="card-duration">Up to 4 sessions/month</div>
-      <div class="card-best-for">For customers who want proactive support, planning, and a more organized long-term tech setup.</div>
+      <div class="card-best-for">For clients who want proactive support, tech planning, AI onboarding, and a more organized long-term setup.</div>
       <div class="card-divider"></div>
       <div class="card-includes">Includes</div>
       <ul class="card-list">
         <li>Up to 4 remote sessions/month</li>
-        <li>Priority access</li>
-        <li>Monthly check-in</li>
+        <li>Same-business-day response</li>
+        <li>Between-session assistance</li>
+        <li>Monthly planning check-in</li>
         <li>Tech roadmap support</li>
         <li>AI tools onboarding</li>
-        <li>Vendor recommendations</li>
+        <li>Session recaps and planning notes</li>
         <li>Evening appointments by request</li>
         <li>15% off eligible installs</li>
       </ul>
-      <div class="card-cta"><a href="https://book.all-tech-connect.com" target="_blank" class="cta-secondary">Start strategy plan</a></div>
+      <div class="card-cta"><a href="https://book.all-tech-connect.com" target="_blank" class="cta-secondary">Start Strategy Support</a></div>
     </div>
 
   </div>
@@ -709,91 +756,96 @@ footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 60px 24p
   </div>
 </section>
 
-<!-- INSTALLS & ADD-ONS -->
-<section class="pricing-section alt" id="installs">
+<!-- STRATEGY & AI -->
+<section class="pricing-section" id="strategy-ai">
   <div class="section-header">
-    <div class="section-eyebrow">Installs &amp; add-ons</div>
-    <h2 class="section-title">Smart home installation.</h2>
-    <p class="section-sub">Need help installing smart home devices or setting up new equipment? Standard installs and starter packages are available.</p>
-  </div>
-  <div class="card-grid two-col">
-
-    <div class="pricing-card">
-      <div class="card-label">Standard Install</div>
-      <div class="card-title">Install Visit</div>
-      <div class="card-price">$130<span> min</span></div>
-      <div class="card-duration">In-home · First device included</div>
-      <div class="card-divider"></div>
-      <div class="card-includes">Includes</div>
-      <ul class="card-list">
-        <li>Visit and first standard device install</li>
-        <li>Basic app setup</li>
-        <li>Basic walkthrough</li>
-        <li>Additional devices: $50 each</li>
-      </ul>
-      <div class="card-note">Complex work (account recovery, WiFi issues, wiring, electrical) billed at $80/hr. Client responsible for all devices and account logins.</div>
-      <div class="card-cta"><a href="https://book.all-tech-connect.com" target="_blank" class="cta-secondary">Book install visit</a></div>
-    </div>
-
-    <div class="pricing-card featured">
-      <div class="featured-badge">Bundle deal</div>
-      <div class="card-label">Smart Home Starter</div>
-      <div class="card-title">3-Device Bundle</div>
-      <div class="card-price">$399</div>
-      <div class="card-duration">Up to 3 hours on-site</div>
-      <div class="card-divider"></div>
-      <div class="card-includes">Includes installation of</div>
-      <ul class="card-list">
-        <li>One smart doorbell</li>
-        <li>One smart lock</li>
-        <li>One smart thermostat</li>
-        <li>App setup for all devices</li>
-        <li>Basic walkthrough</li>
-      </ul>
-      <div class="card-note">Standard installation only. Electrical work, wiring issues, or door modifications billed at $80/hr. Plan discounts may apply.</div>
-      <div class="card-cta"><a href="https://book.all-tech-connect.com" target="_blank" class="cta-primary">Book smart home starter</a></div>
-    </div>
-
-  </div>
-</section>
-
-<!-- PROFESSIONAL / BUSINESS SUPPORT -->
-<section class="pricing-section" id="business">
-  <div class="section-header">
-    <div class="section-eyebrow">Professional support</div>
-    <h2 class="section-title">For small teams and busy professionals.</h2>
-    <p class="section-sub">More consistent, higher-touch support scoped around your needs. All professional plans start with a free consultation.</p>
+    <div class="section-eyebrow">Strategy &amp; AI</div>
+    <h2 class="section-title">AI integration and long-term tech planning.</h2>
+    <p class="section-sub">Strategy services are for bigger-picture work: AI setup, workflow design, business systems, and tech decisions that go beyond standard support sessions.</p>
   </div>
   <div class="card-grid">
 
     <div class="pricing-card">
-      <div class="card-label">Executive</div>
-      <div class="card-title">Executive Tech Support</div>
-      <div class="card-price">$499<span>/mo+</span></div>
-      <div class="card-duration">Starting at · 3 hrs/month</div>
-      <div class="card-best-for">For business owners, executives, and busy professionals who want trusted personal tech support.</div>
+      <div class="card-label">Strategy</div>
+      <div class="card-title">Strategy Session</div>
+      <div class="card-price">$250</div>
+      <div class="card-duration">1 hour &middot; Remote</div>
+      <div class="card-best-for">A focused session for planning, AI tools, workflow improvement, and bigger-picture tech decisions.</div>
       <div class="card-divider"></div>
-      <div class="card-includes">Includes</div>
+      <div class="card-includes">Good for</div>
       <ul class="card-list">
-        <li>Up to 3 support hours/month</li>
-        <li>Priority scheduling</li>
-        <li>Same-business-day response</li>
-        <li>AI tools onboarding</li>
-        <li>Device ecosystem planning</li>
-        <li>Travel tech prep</li>
-        <li>Password manager and account org</li>
-        <li>Additional support at $100/hr</li>
+        <li>ChatGPT, Claude, Gemini, or Copilot setup</li>
+        <li>AI workflow design</li>
+        <li>Google Workspace or Microsoft 365 planning</li>
+        <li>Tech roadmap planning</li>
+        <li>Workflow and productivity improvement</li>
+        <li>Vendor recommendations</li>
+      </ul>
+      <div class="card-cta"><a href="https://book.all-tech-connect.com" target="_blank" class="cta-secondary">Book strategy session</a></div>
+    </div>
+
+    <div class="pricing-card featured">
+      <div class="featured-badge">Most requested</div>
+      <div class="card-label">AI</div>
+      <div class="card-title">AI Workflow Audit</div>
+      <div class="card-price">$500<span>+</span></div>
+      <div class="card-duration">Starting at &middot; Remote or in-person</div>
+      <div class="card-best-for">For small businesses, solopreneurs, executives, and individuals who want to identify practical AI opportunities and build better workflows.</div>
+      <div class="card-divider"></div>
+      <div class="card-includes">Good for</div>
+      <ul class="card-list">
+        <li>Finding where AI can save real time</li>
+        <li>Building reusable prompt templates</li>
+        <li>Mapping current tools to AI alternatives</li>
+        <li>Identifying workflow bottlenecks</li>
+        <li>Creating a practical AI adoption plan</li>
+        <li>Custom AI assistant setup</li>
+      </ul>
+      <div class="card-cta"><a href="https://book.all-tech-connect.com" target="_blank" class="cta-primary">Request consultation</a></div>
+    </div>
+
+    <div class="pricing-card">
+      <div class="card-label">Custom</div>
+      <div class="card-title">Business Strategy</div>
+      <div class="card-price" style="font-size:26px;">Custom</div>
+      <div class="card-duration">Scoped after consultation</div>
+      <div class="card-best-for">For implementation, documentation, custom AI instructions, business systems, and workflow design.</div>
+      <div class="card-divider"></div>
+      <div class="card-includes">May include</div>
+      <ul class="card-list">
+        <li>Custom AI assistant instructions</li>
+        <li>SOP creation and documentation</li>
+        <li>Sales and follow-up workflows</li>
+        <li>CRM and reporting systems</li>
+        <li>Team training</li>
+        <li>Tech stack planning</li>
       </ul>
       <div class="card-cta"><a href="https://book.all-tech-connect.com" target="_blank" class="cta-secondary">Request consultation</a></div>
     </div>
+
+  </div>
+
+  <div class="boundary-note">
+    Basic AI tool orientation can be covered in standard sessions. Workflow design, business use cases, custom instructions, automation planning, and implementation are Strategy services and may be priced separately.
+  </div>
+</section>
+
+<!-- BUSINESS SUPPORT -->
+<section class="pricing-section alt" id="business">
+  <div class="section-header">
+    <div class="section-eyebrow">Business Support</div>
+    <h2 class="section-title">For small teams and growing businesses.</h2>
+    <p class="section-sub">Practical tech support, training, and advisory help for small businesses. All business plans start with a free consultation.</p>
+  </div>
+  <div class="card-grid two-col">
 
     <div class="pricing-card featured">
       <div class="featured-badge">For small teams</div>
       <div class="card-label">Small Business</div>
       <div class="card-title">Small Business Support</div>
       <div class="card-price">$799<span>/mo+</span></div>
-      <div class="card-duration">Starting at · Up to 5 users</div>
-      <div class="card-best-for">For small teams that need tech support, training, and guidance without hiring full-time IT.</div>
+      <div class="card-duration">Starting at &middot; Up to 5 users</div>
+      <div class="card-best-for">For solo operators, consultants, local service businesses, and small teams who need practical help with accounts, tools, workflows, and documentation.</div>
       <div class="card-divider"></div>
       <div class="card-includes">Includes</div>
       <ul class="card-list">
@@ -814,17 +866,17 @@ footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 60px 24p
       <div class="card-title">Business Strategy</div>
       <div class="card-price" style="font-size:26px;">Custom</div>
       <div class="card-duration">Scoped after consultation</div>
-      <div class="card-best-for">For businesses that need more involved planning, AI onboarding, documentation, or team training.</div>
+      <div class="card-best-for">For businesses that need more involved technology planning, AI onboarding, documentation, workflow improvement, or team training.</div>
       <div class="card-divider"></div>
       <div class="card-includes">May include</div>
       <ul class="card-list">
         <li>Custom monthly support hours</li>
         <li>Technology documentation</li>
         <li>Tech roadmap support</li>
+        <li>AI tools onboarding and workflow design</li>
         <li>Team training</li>
-        <li>AI tools onboarding</li>
-        <li>Vendor recommendations</li>
         <li>New employee onboarding support</li>
+        <li>Vendor recommendations</li>
       </ul>
       <div class="card-cta"><a href="https://book.all-tech-connect.com" target="_blank" class="cta-secondary">Request consultation</a></div>
     </div>
@@ -832,34 +884,13 @@ footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 60px 24p
   </div>
 </section>
 
-<!-- GIFT CARDS -->
-<section class="pricing-section alt">
-  <div class="section-header">
-    <div class="section-eyebrow">Gift cards</div>
-    <h2 class="section-title">Give the gift of working tech.</h2>
-    <p class="section-sub">Digital delivery by email. Valid for 12 months. Applies toward any All Tech Connect service.</p>
-  </div>
-  <div class="card-grid four-col">
-    <div class="pricing-card" style="text-align:center;">
-      <div class="card-price">$75</div>
-      <div class="card-label" style="margin-top:6px;">Remote session</div>
-      <div style="margin-top:auto; padding-top:20px;"><a href="https://book.all-tech-connect.com" target="_blank" class="btn btn-secondary" style="width:100%; justify-content:center; font-size:14px;">Buy gift card</a></div>
-    </div>
-    <div class="pricing-card" style="text-align:center;">
-      <div class="card-price">$150</div>
-      <div class="card-label" style="margin-top:6px;">In-home help</div>
-      <div style="margin-top:auto; padding-top:20px;"><a href="https://book.all-tech-connect.com" target="_blank" class="btn btn-secondary" style="width:100%; justify-content:center; font-size:14px;">Buy gift card</a></div>
-    </div>
-    <div class="pricing-card" style="text-align:center;">
-      <div class="card-price">$199</div>
-      <div class="card-label" style="margin-top:6px;">Setup pack</div>
-      <div style="margin-top:auto; padding-top:20px;"><a href="https://book.all-tech-connect.com" target="_blank" class="btn btn-secondary" style="width:100%; justify-content:center; font-size:14px;">Buy gift card</a></div>
-    </div>
-    <div class="pricing-card" style="text-align:center;">
-      <div class="card-price">$375</div>
-      <div class="card-label" style="margin-top:6px;">Support pack</div>
-      <div style="margin-top:auto; padding-top:20px;"><a href="https://book.all-tech-connect.com" target="_blank" class="btn btn-secondary" style="width:100%; justify-content:center; font-size:14px;">Buy gift card</a></div>
-    </div>
+<!-- INSTALLS CALLOUT -->
+<section class="pricing-section" id="installs">
+  <div class="section-header" style="margin-bottom: 0;">
+    <div class="section-eyebrow">Installs</div>
+    <h2 class="section-title">Smart home installation.</h2>
+    <p class="section-sub" style="margin-bottom: 32px;">In-home installation and smart home setup have their own page with full pricing. Doorbells, locks, thermostats, and more.</p>
+    <a href="https://book.all-tech-connect.com" target="_blank" class="btn btn-secondary">View install services</a>
   </div>
 </section>
 
@@ -884,11 +915,31 @@ footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 60px 24p
 
     <div class="accordion-item">
       <button class="accordion-btn" onclick="toggleAccordion(this)">
+        Between-session assistance
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-body">
+        Support Plan clients can reach out between sessions for light guidance: quick questions, help deciding if an issue is urgent, scheduling advice, and brief follow-up clarification. Troubleshooting that requires screen sharing, step-by-step support, research, account recovery, or more than a brief exchange may count as a session or be billed separately. Between-session assistance is not a helpdesk or unlimited support channel.
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
+        Same-day response policy
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-body">
+        Support Plan and Strategy Support clients receive same-business-day responses during normal business hours (Tuesday&ndash;Saturday, 10am&ndash;7pm Central). Support Lite clients receive a response within 1 business day. Same-day response means you'll hear back the same day if you reach out during business hours. It does not mean the issue will be fully resolved the same day.
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this)">
         Monthly plan boundaries
         <span class="accordion-icon">+</span>
       </button>
       <div class="accordion-body">
-        Monthly plans include the number of sessions listed. Unused sessions do not roll over unless otherwise agreed in writing. Light text and email support covers simple questions, scheduling, basic guidance, and follow-up clarification. Troubleshooting that requires screen sharing, step-by-step support, or research may count as a session or be billed separately.
+        Monthly plans include the number of sessions listed. Unused sessions do not roll over unless otherwise agreed in writing. Additional support beyond the included monthly sessions is billed at the applicable hourly rate.
       </div>
     </div>
 
@@ -908,7 +959,7 @@ footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 60px 24p
         <span class="accordion-icon">+</span>
       </button>
       <div class="accordion-body">
-        Evening appointments may be available by request up to 9pm. After-hours availability is not guaranteed unless specifically included in your plan or agreed in advance. Response times apply during normal business hours (Tuesday–Saturday, 10am–7pm Central) unless otherwise stated.
+        Evening appointments may be available by request up to 9pm. After-hours availability is not guaranteed unless specifically included in your plan or agreed in advance. Response times apply during normal business hours (Tuesday&ndash;Saturday, 10am&ndash;7pm Central) unless otherwise stated.
       </div>
     </div>
 
@@ -944,8 +995,8 @@ footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 60px 24p
   <div class="faq-grid">
 
     <div class="faq-item">
-      <h4>Do I need a Pack or a Plan?</h4>
-      <p>Choose a Pack if you have a specific project or want prepaid sessions without a monthly commitment. Choose a Plan if you want ongoing support, priority access, and peace of mind throughout the year.</p>
+      <h4>What's the difference between a Single Session and a Support Plan?</h4>
+      <p>Single sessions are pay-as-you-go: book when you need help, pay per session. Support Plans are for clients who want ongoing access &mdash; someone they can reach between sessions, same-day responses, and a tech contact who already knows their setup. If you only have one issue to solve, start with a session. If you find yourself reaching out every few weeks, a plan is a better fit.</p>
     </div>
 
     <div class="faq-item">
@@ -959,18 +1010,23 @@ footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 60px 24p
     </div>
 
     <div class="faq-item">
+      <h4>What counts as a Strategy service?</h4>
+      <p>Basic AI tool orientation &mdash; like getting started with ChatGPT or showing you how to use a specific app &mdash; can be covered in standard sessions. Workflow design, custom AI instructions, automation planning, business use cases, and implementation work are Strategy services and may be priced separately. If you're not sure, the free consultation is a good place to figure that out.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>What AI tools do you help with?</h4>
+      <p>ChatGPT, Claude, Google Gemini, Microsoft Copilot, and other common AI productivity tools. I can help with setup, basic orientation, and workflow design. More advanced implementation &mdash; custom instructions, business integrations, automation &mdash; falls under Strategy services.</p>
+    </div>
+
+    <div class="faq-item">
       <h4>Do Plans include unlimited text and email support?</h4>
-      <p>No. Plans include light support for simple questions, scheduling, basic guidance, and follow-up clarification. Troubleshooting that requires screen sharing, research, or step-by-step support may count as a session or be billed separately.</p>
+      <p>No. Plans include between-session assistance for simple questions, scheduling, and brief guidance. Troubleshooting that requires screen sharing, research, or step-by-step support may count as a session or be billed separately.</p>
     </div>
 
     <div class="faq-item">
       <h4>Do you guarantee data recovery?</h4>
       <p>No. Backup support includes setup, review, and periodic check-ins. It does not guarantee data recovery or replace the customer's responsibility to maintain active backup services.</p>
-    </div>
-
-    <div class="faq-item">
-      <h4>Do you provide business IT support?</h4>
-      <p>All Tech Connect provides light business tech support, setup, training, and advisory help. It does not replace managed IT, emergency support, cybersecurity monitoring, or full-time help desk coverage unless specifically agreed in writing.</p>
     </div>
 
     <div class="faq-item">
@@ -980,7 +1036,7 @@ footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 60px 24p
 
     <div class="faq-item">
       <h4>Not sure what you need?</h4>
-      <p>That's exactly what the free consultation is for. Twenty minutes, no obligation — we'll figure out the right fit together.</p>
+      <p>That's exactly what the free consultation is for. Twenty minutes, no obligation &mdash; we'll figure out the right fit together.</p>
     </div>
 
   </div>
@@ -990,8 +1046,12 @@ footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 60px 24p
 <section class="final-cta">
   <div class="final-cta-inner">
     <h2>Not sure where to start?</h2>
-    <p>The first call is free, friendly, and only takes 20 minutes. No sales pitch, no commitment.</p>
+    <p>Most clients start with a single session or a free consultation. I'll recommend the best fit after we talk.</p>
     <a href="https://book.all-tech-connect.com" target="_blank" class="btn btn-primary btn-large">Book your free consultation</a>
+    <div class="final-cta-secondary">
+      <a href="#installs">Smart home installs &rarr;</a>
+      <a href="https://book.all-tech-connect.com" target="_blank">Gift cards &rarr;</a>
+    </div>
   </div>
 </section>
 
@@ -1009,10 +1069,11 @@ footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 60px 24p
     </div>
     <div class="footer-col">
       <h4>Services</h4>
-      <a href="#individuals">For individuals</a>
+      <a href="#setup">For individuals</a>
       <a href="#business">For business</a>
       <a href="#installs">Smart home</a>
-      <a href="#strategy">AI consulting</a>
+      <a href="#strategy-ai">AI consulting</a>
+      <a href="https://book.all-tech-connect.com" target="_blank">Gift cards</a>
     </div>
     <div class="footer-col">
       <h4>Company</h4>
@@ -1027,7 +1088,7 @@ footer { background: var(--ink); color: rgba(255,255,255,0.6); padding: 60px 24p
     </div>
   </div>
   <div class="footer-bottom">
-    <div>© 2026 All Tech Connect, LLC. Houston, TX.</div>
+    <div>&copy; 2026 All Tech Connect, LLC. Houston, TX.</div>
     <div>Setup. Support. Strategy.</div>
   </div>
 </footer>
