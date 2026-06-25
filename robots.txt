@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://all-tech-connect.com/sitemap.xml
